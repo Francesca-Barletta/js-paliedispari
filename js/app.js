@@ -47,8 +47,10 @@ function isUserWordPalindroma(userWord) {
 }
 const userResult = isUserWordPalindroma(userWord)
 if (userResult === true) {
+    console.log('parola palindroma')
     alert('parola palindroma')
 } else {
+    console.log('parola non palindroma')
     alert('parola non palindroma')
 }
 
