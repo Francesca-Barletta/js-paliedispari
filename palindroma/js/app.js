@@ -1,4 +1,4 @@
-console.log('paliedispari')
+console.log('palindroma')
 /*Palidroma
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire 

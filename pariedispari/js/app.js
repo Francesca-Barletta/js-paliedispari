@@ -9,10 +9,9 @@ Dichiariamo chi ha vinto.*/
 //pari e dispari
 
 //chiedere all'utente tramite prompt di scegliere pari o dispari
-let userChoice = ('scrivi pari o dispari in base alla tua scelta');
-let even
-let odd
-
+let userChoice = prompt('scrivi pari o dispari in base alla tua scelta');
+let numberControl
+console.log(userChoice)
 if( userChoice === 'pari'){
     even = userChoice
     console.log('pari')
@@ -23,6 +22,43 @@ if( userChoice === 'pari'){
     alert('parola sbagliata scrivi pari o dispari')
 }
 
+let userNumber = parseInt(prompt('inserisci un numero da 1 a 5'));
+ console.log(userNumber)
+if(userNumber < 1 || userNumber > 5){
+    console.log('numero errato')
+    alert('numero errato')
+}
+
+const consoleRandomNumber = Math.floor(Math.random() * 5) +1;
+console.log(consoleRandomNumber)
+
+function sum(userNumber, consoleRandomNumber){
+    const sumResult = userNumber + consoleRandomNumber;
+    
+    console.log('sumResult ',sumResult)
+    const isResultEven = sumResult % 2;
+    if(isResultEven === 0){
+        numberControl = ('pari')
+        console.log(numberControl)
+    }else{
+        numberControl = ('dispari')
+        console.log(numberControl)
+    }
+    if(numberControl === userChoice){
+        return true
+    }else{
+        return false
+    }
+
+
+}
+const finalResult = sum(userNumber, consoleRandomNumber);
+console.log(finalResult)
+if(finalResult === true){
+    alert('hai vinto')
+} else{
+    alert('hai perso')
+}
 //inserisce un numero da 1 a 5
 //genero un numero ramndom sempre da 1 a 5 per il computer
 //sommo i due numeri
