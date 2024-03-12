@@ -9,44 +9,55 @@ Dichiariamo chi ha vinto.*/
 //pari e dispari
 
 //chiedere all'utente tramite prompt di scegliere pari o dispari
-let userChoice = prompt('scrivi pari o dispari in base alla tua scelta');
+//let userChoice = prompt('scrivi pari o dispari in base alla tua scelta');
 let numberControl
-console.log(userChoice)
-if( userChoice === 'pari'){
-    even = userChoice
+let userChoice //= prompt('scrivi pari o dispari in base alla tua scelta');
+
+// voglio dirgli di chiedere pari o dispari finchè la parola inserita non è esatta
+//
+do{
+    userChoice = prompt('scrivi pari o dispari in base alla tua scelta'); // dispari
+    
+}while(userChoice !== 'pari' && userChoice !== 'dispari') ; // true && false => false 
+
+//console.log(userChoice)
+if(userChoice === 'pari') {   
     console.log('pari')
-}else if(userChoice === 'dispari'){
-    odd = userChoice
+    }if(userChoice === 'dispari') {
     console.log('dispari')
-}else{
-    alert('parola sbagliata scrivi pari o dispari')
-}
+    }
 
-let userNumber = parseInt(prompt('inserisci un numero da 1 a 5'));
- console.log(userNumber)
-if(userNumber < 1 || userNumber > 5){
-    console.log('numero errato')
-    alert('numero errato')
-}
+    let userNumber    
+do{
+    //userNumber = parseInt(prompt('inserisci un numero da 1 a 5'));
+   
+    userNumber = parseInt(prompt('inserisci un numero da 1 a 5'));
+}while(userNumber < 1 || userNumber > 5 || isNaN(userNumber));
 
-const consoleRandomNumber = Math.floor(Math.random() * 5) +1;
+console.log(userNumber)
+//if (userNumber < 1 || userNumber > 5) {
+//    console.log('numero errato')
+//    alert('numero errato')
+//}
+
+const consoleRandomNumber = Math.floor(Math.random() * 5) + 1;
 console.log(consoleRandomNumber)
 
-function sum(userNumber, consoleRandomNumber){
+function sum(userNumber, consoleRandomNumber) {
     const sumResult = userNumber + consoleRandomNumber;
-    
-    console.log('sumResult ',sumResult)
+
+    console.log('sumResult ', sumResult)
     const isResultEven = sumResult % 2;
-    if(isResultEven === 0){
+    if (isResultEven === 0) {
         numberControl = ('pari')
         console.log(numberControl)
-    }else{
+    } else {
         numberControl = ('dispari')
         console.log(numberControl)
     }
-    if(numberControl === userChoice){
+    if (numberControl === userChoice) {
         return true
-    }else{
+    } else {
         return false
     }
 
@@ -54,9 +65,9 @@ function sum(userNumber, consoleRandomNumber){
 }
 const finalResult = sum(userNumber, consoleRandomNumber);
 console.log(finalResult)
-if(finalResult === true){
+if (finalResult === true) {
     alert('hai vinto')
-} else{
+} else {
     alert('hai perso')
 }
 //inserisce un numero da 1 a 5
