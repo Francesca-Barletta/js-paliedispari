@@ -9,17 +9,10 @@ Creare una funzione per capire
 alla fine stampate in console un messaggio 
 per dire all’utente il risultato del controllo
 
-Pari e Dispari
-L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
-Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
-Sommiamo i due numeri
-Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-Dichiariamo chi ha vinto.*/
-
 
 //Palindroma
 
-//devo chiedere all'utente di inserire una parola tramite prompt
+//devo chiedere all'utente di inserire una parola tramite prompt*/
 
 const userWord = prompt('inserisci una parola palindroma');
 console.log(userWord)
@@ -46,15 +39,13 @@ function isUserWordPalindroma(userWord) {
         return true
 }
 const userResult = isUserWordPalindroma(userWord)
-if (userResult === true) {
+if (userResult === true) {//la funzione deve ritornare il valore true
     console.log('parola palindroma')
     alert('parola palindroma')
-} else {
+} else {//altrimenti ritorna il valore false
     console.log('parola non palindroma')
     alert('parola non palindroma')
 }
 
-
-//la funzione deve ritornare il valore true
-//altrimenti ritorna il valore false
 //alla fine devo stampare in console un messaggio che dice all'utente il risultato del controllo
+
