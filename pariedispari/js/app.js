@@ -15,24 +15,24 @@ let userChoice //= prompt('scrivi pari o dispari in base alla tua scelta');
 
 // voglio dirgli di chiedere pari o dispari finchè la parola inserita non è esatta
 //
-do{
+do {
     userChoice = prompt('scrivi pari o dispari in base alla tua scelta'); // dispari
-    
-}while(userChoice !== 'pari' && userChoice !== 'dispari') ; // true && false => false 
+
+} while (userChoice !== 'pari' && userChoice !== 'dispari'); // true && false => false 
 
 //console.log(userChoice)
-if(userChoice === 'pari') {   
+if (userChoice === 'pari') {
     console.log('pari')
-    }if(userChoice === 'dispari') {
+} if (userChoice === 'dispari') {
     console.log('dispari')
-    }
+}
 
-    let userNumber    
-do{
+let userNumber
+do {
     //userNumber = parseInt(prompt('inserisci un numero da 1 a 5'));
-   
+
     userNumber = parseInt(prompt('inserisci un numero da 1 a 5'));
-}while(userNumber < 1 || userNumber > 5 || isNaN(userNumber));
+} while (userNumber < 1 || userNumber > 5 || isNaN(userNumber));
 
 console.log(userNumber)
 //if (userNumber < 1 || userNumber > 5) {
@@ -47,7 +47,9 @@ function sum(userNumber, consoleRandomNumber) {
     const sumResult = userNumber + consoleRandomNumber;
 
     console.log('sumResult ', sumResult)
+
     const isResultEven = sumResult % 2;
+    
     if (isResultEven === 0) {
         numberControl = ('pari')
         console.log(numberControl)

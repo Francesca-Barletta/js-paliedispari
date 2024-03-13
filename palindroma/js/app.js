@@ -17,7 +17,7 @@ per dire all’utente il risultato del controllo
 const userWord = prompt('inserisci una parola palindroma');
 console.log(userWord)
 let wordReverseIndex
-let reverseWord = ('')
+let reverseWord = ''
 ////la parola palindroma si può leggere in entrambi i versi dà sempre la stessa parola
 ////creo un ciclo che legge la parola al contrario
 ////quindi l'indice partirà dal massimo e tornerà indietro
@@ -27,7 +27,7 @@ for (let i = userWord.length - 1; i >= 0; i--) {
 
     //devo unire tutte queste lettere in una stringa
     // salvo la parola al contrario in una variabile
-    reverseWord = reverseWord + wordReverseIndex;
+    reverseWord += wordReverseIndex;
 }
 console.log(reverseWord)
 
@@ -40,11 +40,11 @@ function isUserWordPalindroma(userWord) {
 }
 const userResult = isUserWordPalindroma(userWord)
 if (userResult === true) {//la funzione deve ritornare il valore true
-    console.log('parola palindroma')
-    alert('parola palindroma')
+    console.log(`la parola '${userWord}' è palindroma`)
+    alert(`la parola '${userWord}' è palindroma`)
 } else {//altrimenti ritorna il valore false
-    console.log('parola non palindroma')
-    alert('parola non palindroma')
+    console.log(`la parola '${userWord}' non è palindroma`)
+    alert(`la parola '${userWord}' non è palindroma`)
 }
 
 //alla fine devo stampare in console un messaggio che dice all'utente il risultato del controllo
